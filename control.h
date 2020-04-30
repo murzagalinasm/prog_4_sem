@@ -17,6 +17,6 @@ class Robot:public Control
 public:
 	Snake* snake;
 	void onthink();
-	void distance(int,int,int,int);
+	int distance( Coord a, Coord b);
 	Robot(Snake*);
 };

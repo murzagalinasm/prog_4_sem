@@ -171,9 +171,10 @@ void View::run()
 		draw();
 	}
 }
-void View::rabbit_painter(Coord c)
+void View::rabbit_painter(Coord c) //const Coord& c
 {
 	gotoxy(c.first,c.second);
+	//setcolor(0);
 	putchar('@');
 }
 void View::snake_painter(Coord c, Direction d)

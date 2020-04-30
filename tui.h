@@ -3,10 +3,12 @@
 #include <termios.h>
 #include <sys/ioctl.h>
 #include <vector>
+#include "game.h"
+#include "control.h"
 
-struct winsize ws;
+//struct winsize ws;
 
-class Tty : public ui{
+class Tty : public Ui{
 public:
     Tty();
     ~Tty();
@@ -21,8 +23,12 @@ public:
 
     void on_key(event_fn fn);
     void on_timer(int t, timer_fn fn);
-
+    
+    //void paint(const Snake&); 
+    //void paint(const xy rabbit); 
 private:
+
+public:   
     void cls();
     void putc(int x, int y, char c);
     void hline(int x, int y, int len);
@@ -33,10 +39,10 @@ private:
 
     void init_tty(int echo);
     void fini_tty();
-    void winch()
+    void winch();
 
 private:
-    //struct winsize ws;
+    struct winsize ws;
 
 
-}
+};

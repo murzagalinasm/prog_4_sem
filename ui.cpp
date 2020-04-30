@@ -4,7 +4,7 @@
 #include "tui.h"
 
 Tty::Tty(){
-    Tty::init_tty(_____) //параметр
+    Tty::init_tty(__k8__); 
 }
 
 void Tty::cls(){
@@ -12,7 +12,7 @@ void Tty::cls(){
 } 
 
 void Tty::gotoxy(int x, int y){
-    printf("\e[%d;%d H", x, y)  //Но тут должна быть подстава
+    printf("\e[%d;%d H", x, y);  //Но тут проблема
 }
 
 void Tty::draw(){
