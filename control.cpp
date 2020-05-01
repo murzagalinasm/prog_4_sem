@@ -47,9 +47,6 @@ int Robot::distance( Coord a, Coord b)
 
 
 
-			//Robot::Robot(Game& g) : BOT(g){
-			//ui::get()->ontimer(Game::TICK, std::bind(&Robot::onthink, snake));
-			//}
 
 
 
@@ -58,7 +55,6 @@ int Robot::distance( Coord a, Coord b)
 
 
 void Robot::onthink(){
-	//Ui::get()->on_timer(Game::TICK, std::bind(&Enemy::tick, this));
 	//поиск кролика(ближайшего)
 	
 	auto rab = View::get() -> game -> rabbits;
